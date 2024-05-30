@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Participants" type="ParticipantsType"/>
+  <xs:complexType name="ParticipantType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="name"/>
+      <xs:element type="xs:string" name="surname"/>
+      <xs:element type="xs:string" name="organisation"/>
+      <xs:element type="xs:string" name="report"/>
+      <xs:element type="xs:string" name="email"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ParticipantsType">
+    <xs:sequence>
+      <xs:element type="ParticipantType" name="Participant" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
